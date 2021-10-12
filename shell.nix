@@ -1,11 +1,7 @@
 let
   sources = import ./nix/sources.nix { inherit pkgs; };
 
-  haskellNix = import sources."haskell.nix" {};
-
-  nixpkgs = haskellNix.sources.nixpkgs-unstable;
-
-  pkgs = import nixpkgs {};
+  pkgs = import sources."nixpkgs" {};
 in
 
 with pkgs;
