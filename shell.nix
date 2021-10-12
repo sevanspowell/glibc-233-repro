@@ -17,8 +17,9 @@ mkShell rec {
 
   libs = [ ncurses ];
 
+  # This does not fail
   nobuildPhase = "echo ${lib.makeLibraryPath libs}";
 
-  # Ensure that libz.so and other libraries are available to TH splices.
+  # This DOES fail
   LD_LIBRARY_PATH = lib.makeLibraryPath libs;
 }
