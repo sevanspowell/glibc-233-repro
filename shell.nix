@@ -5,9 +5,7 @@ let
 
   nixpkgs = haskellNix.sources.nixpkgs-unstable;
 
-  pkgs = import nixpkgs {
-    config = haskellNix.nixpkgsArgs.config;
-  };
+  pkgs = import nixpkgs {};
 in
 
 with pkgs;
