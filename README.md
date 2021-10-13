@@ -1,7 +1,5 @@
 # Reproduction
 
 ```
-$ nix-shell
-OR
-$ nix-shell --pure
+$ nix-shell shell-bootstrap.nix --pure --run "nix-shell --pure"
 ```
